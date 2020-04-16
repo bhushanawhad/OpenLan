@@ -1,0 +1,558 @@
+﻿
+/** Schedule Services **/
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#SearchSchedule {
+	line-height: 25px;
+}
+
+#SearchSchedule .errorLabel, .bookingError {
+	color:#FF0000;
+	font-weight:bold;
+	clear:both;
+}
+
+#SearchSchedule .serviceDropdown {
+	min-width: 150px;
+}
+
+.sectionSpacer {
+	padding-bottom: 10px;
+}
+
+.instructionText {
+	font-weight:bold;
+}
+
+.leftCalendar {
+	clear:both;
+	float:left; 
+	padding-bottom: 10px;
+	width: 300px;
+}
+
+.rightCalendar {
+	float:left; 
+	padding-bottom: 10px;
+	width: 300px;
+}
+
+.row {
+	padding-top: 15px
+}
+
+/** Knowledge Base **/
+
+#kb-search {
+	margin-bottom: 20px;
+}
+
+#kb-search .kb-search-input {
+	width: 300px;
+}
+
+.emailAddressInput {
+	Width: 250px;
+}
+
+.emailBtn {
+	margin-bottom: 20px;
+}
+
+/** Service Cases **/
+
+#service-cases {
+	margin-top: 18px;
+}
+
+#service-cases .case-filter {
+	margin-bottom: 1.5em;
+}
+
+#service-cases .cases {
+	margin-bottom: 1.5em;
+	width: 96%;
+}
+
+#service-cases .cases th, #service-cases .cases td {
+	border: solid 1px #ccc;
+	padding: 0.4em 0.8em;
+	text-align: left;
+}
+
+#service-cases fieldset {
+	margin: 1.5em 0;
+}
+
+#service-cases ul {
+	margin: 0;
+	padding: 0;
+}
+
+#service-cases fieldset label {
+	display: block;
+	margin-bottom: 2px;
+}
+
+#service-cases fieldset ul li {
+	margin-bottom: 10px;
+}
+
+#service-cases fieldset ul input, #service-cases fieldset ul select, #service-cases fieldset ul textarea {
+	width: 96%
+}
+
+#service-cases fieldset ul textarea {
+	height: 10em;
+}
+
+#service-cases ul li {
+	list-style: none;
+}
+
+input.PostButton {
+	margin: 5px 0;
+	padding: 0.3em;
+}
+
+ul#case-notes li {
+	border-top: solid 1px #ccc;
+	width: 96%;
+}
+
+ul#case-notes li p.note-data {
+	color: #666;
+	font-size: 0.85em;
+	float: left;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+ul#case-notes li a.note-attachment {
+	float: right;
+	font-size: 0.85em;
+}
+
+ul#case-notes li p.note-content {
+	clear: both;
+	margin-bottom: 1.5em;
+}
+
+#service-cases ul.case-data
+{
+	color: #666;
+	font-size: 0.9em;
+	margin: 15px 0;
+	padding: 0;
+	list-style: none;
+}
+
+.link-list .heading {
+	font-size: 1.2em;
+	margin-top: 1em;
+}
+
+h3.list-title {
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+}
+
+/** Profile **/
+
+.register-form {
+	margin: 1.5em 0 2em 0;
+}
+
+.register-form .row {
+	padding: 5px 0 5px 0;
+	margin: 5px 0;
+	display:block;
+}
+
+.register-form .row span {
+	width: 150px;
+	display:block;
+	float: left;
+}
+
+.register-form .row input {
+	width:250px;
+}
+
+.register-form .validation-message {
+	float:left;
+}
+
+.register-form span {
+	display: inline-block;
+	width: 120px;
+}
+
+.register-form h3 span {
+	width: auto;
+}
+
+.register-form h3 {
+	margin-top:1.5em;
+}
+
+.register-form input {
+	width: 250px;
+}
+
+.register-form select {
+	width: 410px;
+}
+
+.register-form .marketing-preferences span{
+	width:auto;
+}
+
+.register-form .marketing-preferences input{
+	width:auto;
+	padding: 5px;
+	margin-right: 25px;
+}
+
+.register-form .link-list input {
+	width: auto;
+}
+
+.register-form ul.link-list{
+	margin-left:-40px;
+}
+
+.register-form  ul.link-list li{
+	list-style:none;
+}
+
+.error-message {
+	color:#aa3333;
+	padding-top:8px;
+	padding-bottom:8px;
+	width: auto;
+	font-weight:bold;
+}
+
+/** Event Listing **/
+
+.Event-List-Menu .menu-item {
+	background-color: #ADADAD;
+	color: #000000;
+}
+
+.Event-List-Menu .selected {
+	background-color: #DDDDDD;
+}
+
+.Event-List {
+	background-color: #FAFAFA;
+	border-color: #E0E0E0;
+	border-style: solid;
+	border-width: 1px;
+	margin: 2px 0;
+	padding: 0.75em 10px;
+}
+
+.Event-List h3{
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+.Event-List .date-line{
+	font-style:italic;
+	font-size: 0.9em;
+	color:#707070;
+}
+
+.Event-List .location-line{
+	margin-bottom: 5px;
+	font-size: 0.9em;
+	color:#707070;
+}
+
+.Event-List .details
+{
+	margin-bottom: 15px;
+}
+
+/** Event Details **/
+
+.event-details h3{
+	margin-bottom:1em;
+}
+
+.event-details div{
+	margin-bottom: 1em;
+}
+
+.event-details .event-location{
+	margin-bottom:0;
+}
+
+.event-details .event-brochure{
+	margin-bottom:0;
+}
+
+/** Registration **/
+
+#event-details h3 {
+	margin-bottom: 0;
+}
+
+#event-details div{
+	margin-bottom: 1em;
+}
+
+#event-details .event-address{
+	margin-bottom:0;
+}
+
+#event-registration .required-marker {
+	color: Red;
+}
+
+#event-registration .row:after {
+	content: "."; display: block; height: 0; clear: both; visibility: hidden;
+}
+
+#event-registration .row {
+	clear: both; zoom: 1;
+	margin-bottom: 10px;
+}
+
+#event-registration .field {
+	float: left;
+	width: 300px;
+}
+
+#event-registration .field label {
+	display: block;
+	font-size: 0.8333333333333334em;
+	font-weight: bold;
+	line-height: 1.8em;
+	margin-bottom: 2px;
+}
+
+#event-registration .field input.text, #event-registration .field select {
+	padding: 2px;
+	width: 250px;
+}
+
+#event-registration .row.full .field input.text, #event-registration .row.full .field select, #event-registration .row.full .field textarea.text {
+	width: 550px;
+}
+
+#event-registration .actions .register-button {
+	padding: 2px 4px;
+}
+
+/** Event Calendar **/
+
+#eventCalenderContainer{
+	padding: 0 10px;
+}
+
+#eventCalenderContainer .event-listing{
+	margin-top: 15px;
+}
+
+#eventCalenderContainer .event-listing .date-line{
+	font-style:italic;
+	font-size: 0.9em;
+	color:#707070;
+}
+
+/** Contact Us Form **/
+
+.contact-us {
+	margin-bottom: 1.5em;
+}
+
+/** Product Registration **/
+.register-product .row {
+	margin-bottom: 10px;
+}
+
+.register-product .cell .info, .register-product .row .cell-info {
+	font-size: 0.8em;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+.register-product input.text, .register-product textarea, .register-product select {
+	width: 400px;
+}
+
+.register-product textarea {
+	height: 150px;
+}
+
+.register-product input.text, .register-product textarea {
+	padding: 2px;
+}
+
+.register-product .actions .button {
+	padding: 2px 4px;
+}
+
+.register-product .validators {
+	display: inline;
+	margin-left: 2px;
+}
+
+.register-product .actions {
+	margin-bottom:20px;
+}
+
+.register-product .row span.RegistrationFailure {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.register-product .row span.RegistrationSuccess {
+	font-weight: bold;
+	color: #215E21;
+}
+
+/** Opportunity Details Form **/
+
+.opportunity-details .row{
+	margin-bottom: 8px;
+}
+
+.opportunity-details .cell-info{
+	font-size: 0.8em;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+.opportunity-details textarea, .opportunity-details select {
+	width: 400px;
+}
+
+.opportunity-details textarea {
+	height: 75px;
+}
+
+.opportunity-details input.text, .opportunity-details textarea {
+	padding: 2px;
+}
+
+.opportunity-details .actions .button {
+	padding: 2px 4px;
+}
+
+.opportunity-details .ResultMessage 
+{
+    font-weight: bold;
+}
+
+.opportunity-details .actions{
+	margin-bottom:20px;
+}
+
+#OpportunityNotes ul {
+	margin:0;
+	padding:0;
+}
+
+ul#opp-notes li {
+	border-top: solid 1px #ccc;
+	width: 96%;
+	list-style:none;
+}
+
+ul#opp-notes li p.note-data {
+	color: #666;
+	font-size: 0.85em;
+	float: left;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+}
+
+ul#opp-notes li a.note-attachment {
+	float: right;
+	font-size: 0.85em;
+}
+
+ul#opp-notes li p.note-content {
+	clear: both;
+	margin-bottom: 1.5em;
+}
+
+/** View Opportunities **/
+#opportunites {
+	margin-top: 18px;
+}
+
+#opportunites .opp-filter {
+	margin-bottom: 1.5em;
+}
+
+#opportunites .opps {
+	margin-bottom: 1.5em;
+	width: 96%;
+}
+
+#opportunites .opps th, #opportunites .opps td {
+	border: solid 1px #ccc;
+	padding: 0.4em 0.8em;
+	text-align: left;
+}
+
+#opportunites fieldset {
+	margin: 1.5em 0;
+}
+
+#opportunites ul {
+	margin: 0;
+	padding: 0;
+}
+
+#opportunites fieldset label {
+	display: block;
+	margin-bottom: 2px;
+}
+
+#opportunites fieldset ul li {
+	margin-bottom: 10px;
+}
+
+#opportunites fieldset ul input, #opportunites fieldset ul select, #opportunites fieldset ul textarea {
+	width: 96%
+}
+
+#opportunites fieldset ul textarea {
+	height: 10em;
+}
+
+#opportunites ul li {
+	list-style: none;
+}
+
+a.vevent {
+	background: #e8e8e8 url('../images/calendar_add.png') no-repeat 5px 50%;
+	border: solid 1px #adadad;
+	padding: 6px;
+	padding-left: 26px;
+	text-decoration: none;
+}
+
+a.vevent.icon {
+	padding-left: 21px;
+}
+
+a.vevent:hover {
+	background-color: #889bac;
+	color: #fff;
+}
+
+.validator {
+	color: Red;
+}

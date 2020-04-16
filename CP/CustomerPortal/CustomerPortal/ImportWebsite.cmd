@@ -1,0 +1,3 @@
+REM First line is for online, second one is for on-prem
+REM $0\..\..\Utilities\WebsiteCopy /sourceFile:%0\..\CustomerPortal.xml /sourceWebsiteName:"Customer Portal" /targetWebsiteName:"Customer Portal" /targetConnectionString:"ServiceUri=https://myorg.crm.dynamics.com/; Username=user@domain.com; Password=pass@word1; DeviceId=110xr1xrmzequdyj5mc9zpp4rm; DevicePassword=$P97SteyCJJg)fl`_elmzCY4;"
+$0\..\..\Utilities\WebsiteCopy /sourceFile:%0\..\CustomerPortal.xml /sourceWebsiteName:"Customer Portal" /targetWebsiteName:"Customer Portal" /targetConnectionString:"ServiceUri=http://crm/Contoso; Domain=CONTOSO; Username=Administrator; Password=pass@word1;"

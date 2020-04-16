@@ -1,0 +1,106 @@
+<%@ Master Language="C#" AutoEventWireup="True" Inherits="Site.MasterPages.Default" CodeBehind="Default.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<crm:CrmEntityDataSource ID="CurrentEntity" DataItem="<%$ CrmSiteMap: Current %>" runat="server" />
+	<head runat="server">
+		<title>
+			<asp:Literal Text="<%$ Snippet: Browser Title Prefix %>" runat="server" />
+			<crm:Property DataSourceID="CurrentEntity" PropertyName="Adx_Title,Adx_name" Literal="true" HtmlEncode="true" runat="server" />
+		</title>
+		<link rel="stylesheet" type="text/css" href="~/css/acs.css" />
+		<link rel="stylesheet" type="text/css" href="~/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="~/css/eservices.css" />
+		<link rel="stylesheet" type="text/css" href="~/css/settings.css.aspx" />
+		<link rel="stylesheet" type="text/css" href="~/css/print.css" media="print" />
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.9.0/build/assets/skins/sam/skin.css" />
+	</head>
+	<body>
+		<form runat="server">
+			<asp:ScriptManager runat="server">
+				<Scripts>
+					<asp:ScriptReference Path="http://yui.yahooapis.com/combo?2.9.0/build/yahoo-dom-event/yahoo-dom-event.js&2.9.0/build/element/element-min.js&2.9.0/build/connection/connection-min.js&2.9.0/build/dragdrop/dragdrop-min.js&2.9.0/build/container/container-min.js&2.9.0/build/menu/menu-min.js&2.9.0/build/button/button-min.js&2.9.0/build/calendar/calendar-min.js&2.9.0/build/cookie/cookie-min.js&2.9.0/build/json/json-min.js" />
+					<asp:ScriptReference Path="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js" />
+					<asp:ScriptReference Path="~/js/site.js" />
+				</Scripts>
+			</asp:ScriptManager>
+			<crm:SiteEditingManager runat="server">
+				<%-- These scripts and styles are required for XRM inline editing support. CDN-based versions are included here for convenience, but they can also be downloaded and hosted locally if desired. --%>
+				<DependencyScripts>
+					<asp:ScriptReference Path="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js" />
+					<asp:ScriptReference Path="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.19/jquery-ui.min.js" />
+					<%-- Add a ScriptReference for TinyMCE (http://tinymce.moxiecode.com/) here to enable rich HTML editing. (Framework designed for TinyMCE 3.x) --%>
+				</DependencyScripts>
+			</crm:SiteEditingManager>
+			<div id="layout">
+				<div id="hd">
+					<crm:Snippet SnippetName="Header" EditType="html" runat="server" />
+					<div id="hd-links">
+						<asp:LoginView ID="LoginViewControl" runat="server">
+							<AnonymousTemplate>
+								<asp:HyperLink ID="LoginLink" runat="server" Text='<%$ Snippet: links/login, Login %>' NavigateUrl="~/login"/>
+							</AnonymousTemplate>
+							<LoggedInTemplate>
+								<asp:Literal runat="server" Text='<%$ Context: Property=User, Attribute=fullname %>'/> &ndash;
+								<asp:HyperLink NavigateUrl='<%$ CrmSiteMap: SiteMarker=Profile, Eval=Url %>' Text='<%$ Snippet: Profile Link Text, Manage Account %>' runat="server" /> &ndash;
+								<asp:HyperLink ID="LogoutLink" runat="server" Text='<%$ Snippet: links/logout, Logout %>' NavigateUrl="/Pages/logout.aspx"/>
+							</LoggedInTemplate>
+						</asp:LoginView>
+					</div>
+					<crm:WebLinks WebLinkSetName="Primary Navigation" CssClass="navigation" ShowLinkDescriptions="false" ShowCopy="false" ShowTitle="false" ShowImage="false" runat="server" />
+				</div>
+				<div id="bd">
+					<div id="main" style="width:100%">
+						<asp:ContentPlaceHolder ID="Breadcrumbs" runat="server">
+							<asp:SiteMapPath CssClass="breadcrumbs" runat="server" />
+						</asp:ContentPlaceHolder>
+						<div id="content">
+							<asp:ContentPlaceHolder ID="Content" runat="server">
+								<h1>
+									<crm:Property DataSourceID="CurrentEntity" PropertyName="Adx_Title,Adx_name" EditType="text" runat="server" />
+								</h1>
+								<crm:Property DataSourceID="CurrentEntity" PropertyName="Adx_Copy" CssClass="copy" EditType="html" runat="server" />
+							</asp:ContentPlaceHolder>
+							<asp:ContentPlaceHolder ID="ContentBottom" runat="server">
+								<crm:CrmSiteMapChildView runat="server">
+									<LayoutTemplate>
+										<div class="navigation insert">
+											<ul>
+												<asp:PlaceHolder ID="ItemPlaceHolder" runat="server" />
+											</ul>
+										</div>
+									</LayoutTemplate>
+									<ItemTemplate>
+										<li>
+											<asp:HyperLink NavigateUrl='<%# Eval("Url") %>' Text='<%# Eval("Title") %>' runat="server" />
+											<crm:CrmEntityDataSource ID="ChildEntity" DataItem='<%# Container.DataItem %>' runat="server" />
+											<crm:Property DataSourceID="ChildEntity" PropertyName="Adx_Summary,Adx_Description" EditType="html" runat="server" />
+										</li>
+									</ItemTemplate>
+								</crm:CrmSiteMapChildView>
+							</asp:ContentPlaceHolder>
+						</div>
+					</div>
+					<%--<div id="sidebar">
+						<asp:ContentPlaceHolder ID="Sidebar" runat="server">
+							<div class="section first">
+								<crm:WebLinks WebLinkSetName="Secondary Navigation" CssClass="navigation" runat="server" />
+							</div>
+							<asp:ContentPlaceHolder ID="SidebarBottom" runat="server" />
+						</asp:ContentPlaceHolder>
+					</div>--%>
+				</div>
+				<div id="ft">
+					<div class="section first">
+						<crm:Snippet SnippetName="Footer Text Left" EditType="html" runat="server" />
+					</div>
+					<div class="section">
+						<crm:WebLinks WebLinkSetName="Footer" CssClass="navigation" ShowLinkDescriptions="false" ShowCopy="false" ShowTitle="false" ShowImage="false" runat="server" />
+					</div>
+				</div>
+			</div>
+			<crm:CrmEntityEditingManager DataSourceID="CurrentEntity" runat="server" />
+		</form>
+	</body>
+
+</html>

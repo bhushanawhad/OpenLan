@@ -1,0 +1,177 @@
+﻿
+body {
+	color: #333;
+	font-family: Verdana, Sans-Serif;
+	font-size: 12px;
+	line-height: 1.5em;
+	margin: 0;
+	text-align: center;
+}
+
+img {
+	border: none;
+}
+
+#layout {
+	margin: 0 auto;
+	text-align: left;
+	width: 984px;
+}
+
+#hd:after, #bd:after, #ft:after, #hd .navigation:after {
+	content: "."; display: block; height: 0; clear: both; visibility: hidden;
+}
+
+#hd, #bd, #ft, #hd .navigation {
+	clear: both; zoom: 1;
+}
+
+#hd, #ft {
+	color: #fff;
+}
+
+#ft {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+#bd {
+	overflow: hidden;
+}
+
+#ft {
+	padding-bottom: 0.75em;
+	padding-top: 1.5em;
+}
+
+#main, #sidebar {
+	float: left;
+	padding-bottom: 10000px;
+	margin-bottom: -10000px;
+}
+
+p, blockquote, pre, td, th, ul, ol {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin-top: 0;
+}
+
+h4, h5, h6, #main .breadcrumbs, #ft {
+	font-size: 0.8333333333333334em;
+	line-height: 1.8em;
+}
+
+h1, #hd h2 {
+	font-size: 1.6666666666666667em;
+	line-height: 0.9em;
+	margin-bottom: 0.9em;
+}
+
+h2 {
+	font-size: 1.3333333333333333em;
+	line-height: 1.125em;
+	margin-bottom: 1.125em;
+}
+
+h3 {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+h4, h5, h6 {
+	margin-bottom: 1.8em;
+}
+
+.navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#hd .navigation {
+	padding-left: 20px;
+}
+
+#hd .navigation li {
+	float: left;
+}
+
+#hd .navigation li a {
+	display: block;
+	margin-right: 2px;
+	padding: 4px 12px;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+#hd-links {
+       position: absolute;
+       top: 18px;
+       width: 950px;
+       text-align: right;
+}
+
+#hd p, #hd h1, #hd h2, #hd h3, #hd h4, #hd h5, #hd h6 {
+       padding: 18px 30px 0 30px;
+}
+
+#main .breadcrumbs {
+	border-bottom: solid 1px #E0E0E0;
+	display: block;
+	padding: 0.75em 30px;
+}
+
+#content {
+	margin: 1.5em 30px;
+}
+
+#content .insert {
+	background-color: #FAFAFA;
+	border: solid 0 #E0E0E0;
+	border-bottom-width: 1px;
+	border-top-width: 1px;
+	margin: 1.5em -10px;
+	padding: 0.75em 10px;
+}
+
+#sidebar .section {
+	margin: 1.5em 10px;
+}
+
+#ft .section {
+	float: right;
+	text-align: right;
+	width: 49%;
+}
+
+#ft .section.first {
+	float: left;
+	text-align: left;
+}
+
+#ft .navigation .weblinkset-weblinks, #ft .navigation ul, #ft .navigation li {
+	display: inline;
+}
+
+#ft .navigation li {
+	margin-left: 1em;
+}
+
+/** Invite Confirmation **/
+
+#confirm-invite .button {
+	margin-top: 1.5em;
+	padding: 2px;
+}
+
+#confirm-invite .error-message {
+	color: Red;
+	padding: 8px 0;
+	width: auto;
+	font-weight: bold;
+}

@@ -1,0 +1,17 @@
+﻿
+#layout, #main {
+	width: 100%;
+}
+
+#bd {
+	overflow: auto;
+}
+
+#main {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#hd .navigation, #hd-links, #sidebar, #ft .navigation, #main .breadcrumbs {
+	display: none;
+}
